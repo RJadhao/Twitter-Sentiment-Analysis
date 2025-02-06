@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Twitter Sentiment Analysis</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static '/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static '/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static '/responsive.css' %}" rel="stylesheet" />
+  <style>
+    .about_section .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .about_section .col-md-6 {
+      flex: 1;
+    }
+
+    .about_section .detail-box {
+      padding-right: 30px;
+      animation: slideFromLeft 1s ease-out; /* Animation for text */
+    }
+
+    .about_section .img-box {
+      text-align: right;
+      animation: slideFromRight 1s ease-out; /* Animation for image */
+    }
+
+    .about_section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Adjustments for smaller screens */
+    @media (max-width: 768px) {
+      .about_section .row {
+        flex-direction: column;
+      }
+
+      .about_section .col-md-6 {
+        padding-top: 20px; /* Add some space between the elements */
+      }
+
+      .about_section .detail-box {
+        padding-right: 0;
+        animation: none; /* Disable animation for smaller screens */
+      }
+
+      .about_section .img-box {
+        text-align: center;
+        animation: none; /* Disable animation for smaller screens */
+      }
+    }
+
+    /* Define animation keyframes */
+    @keyframes slideFromLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideFromRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand mr-5" href="index.html">
+            <img src="{% static '/logo1.png' %}" alt="" style="width:70px; height:auto;">
+            <span>
+             Twitter Sentiment Analysis
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about"> About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="analysis"> Analysis </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="viewmypred">History</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="myprofile">View Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="logout">LogOut</a>
+                </li>
+              </ul>
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p style="text-align: justify;text-justify: inter-word;">
+              Twitter sentiment analysis using the BERT model involves employing state-of-the-art natural language processing techniques to discern the sentiment of tweets. BERT, a pre-trained deep learning model, effectively captures contextual information, enhancing the understanding of complex language patterns. By inputting tweets into BERT, the model can discern whether the sentiment expressed is positive, negative, or neutral. This enables businesses and researchers to gauge public opinion, monitor brand perception, and detect emerging trends. Leveraging the power of BERT's contextual embeddings, Twitter sentiment analysis provides valuable insights for sentiment-driven decision-making and sentiment-aware applications on the dynamic and vast Twitter platform.
+            </p>
+            <a href="analysis">
+              Get Started
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static '/about-img.png' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+  <!-- end about section -->
+
+ 
+
+
+  <script type="text/javascript" src="{% static '/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static '//bootstrap.js' %}"></script>
+
+
+</body>
+
+</html>
